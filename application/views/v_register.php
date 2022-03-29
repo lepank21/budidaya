@@ -39,10 +39,10 @@
         <!-- ============================================================== -->
         <!-- Login box.scss -->
         <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-            <div class="auth-box bg-dark border-top border-secondary">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark" style="height:100vh">
+            <div class="auth-box bg-dark border-top border-secondary" >
                 <div>
-                    <div class="text-center pt-3 pb-3">
+                    <div class="text-center pt-3 pb-3 text-light">
                         <span class="db"><img src="<?php echo base_url('assets/images/logo-icon.png');?>" alt="logo" /><h1 style="color:#DFFF00">Register</h1></span>
                     </div>
                     <!-- Form -->

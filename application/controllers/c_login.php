@@ -46,5 +46,9 @@ class C_login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect(site_url('c_login/login'));
 	}
+	function register()
+	{
+		$this->load->view('v_register');
+	}
 	
 }

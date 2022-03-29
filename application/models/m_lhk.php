@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_lhk extends CI_Model {
+class M_lhk extends CI_Model
+{
 
 	/**
 	 * Index Page for this controller.
@@ -18,16 +19,26 @@ class M_lhk extends CI_Model {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	
-	function input_data($data,$table)
+
+	function input_data($data, $table)
 	{
-		$this->db->insert($table,$data);
-		
+		$this->db->insert($table, $data);
 	}
 	function tampil_data()
 	{
 		return $this->db->get('karyawan');
 	}
-	
-	
+	function cek_chikin($pers)
+	{
+
+		$this->db->order_by('tanggal DESC');
+		return $this->db->get_where('chikin', $pers);
+	}
+	function ambil_lhk($tanggal,$where)
+	{
+		
+		$this->db->where($where);
+		$this->db->where('tanggal>=',$tanggal);
+		return $this->db->get('lhk');
+	}
 }

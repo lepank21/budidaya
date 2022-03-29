@@ -57,8 +57,5 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('v_login');
 	}
-	function register()
-	{
-		$this->load->view('v_register');
-	}
+	
 }

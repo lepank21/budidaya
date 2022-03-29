@@ -39,13 +39,13 @@
         <!-- ============================================================== -->
         <!-- Login box.scss -->
         <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark" style="height:100vh">
 		
-            <div class="auth-box bg-dark border-top border-secondary">
-                <div id="loginform">
+            <div class="auth-box bg-dark border-top border-secondary" >
+                <div id="loginform" >
                     <div class="text-center pt-3 pb-3">
 					
-                        <span class="db"><img src="<?php echo base_url('assets/images/logo.png');?>" alt="logo" /></span>
+                        <span class="db"><img src="<?php echo base_url('assets/images/logo-icon.png');?>" alt="logo" /><h1 class="text-warning" >Selamat Datang </br> Silahkan Login!</h1></span>
                     </div>
 					
 					<!-- Form -->
@@ -73,7 +73,7 @@
                                 <div class="form-group">
                                     <div class="pt-3">
 									
-                                        <button class="btn btn-danger" type="reset"><i ></i> Reset</button>
+                                        <a href="<?php echo site_url('c_login/register');?>"><button class="btn btn-warning text-light" type="button">Daftar</button></a href>
                                         <button class="btn btn-success float-end text-white" type="submit">Login</button>
                                     </div>
                                 </div>

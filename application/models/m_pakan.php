@@ -24,15 +24,23 @@ class M_pakan extends CI_Model {
 		$this->db->insert($table,$data);
 		
 	}
-	function tampil_data($data)
+	function tampil_data($data,$tanggal)
 	{
+		$this->db->where("tanggal>=",$tanggal);
 		return $this->db->get_where('input_pakan',$data);
 	}
-	function ambil_jenis_pakan($data)
+	function ambil_jenis_pakan($data,$tanggal)
 	{
 		$this->db->group_by('jenis');
-		return $this->db->get_where('input_pakan',$data);
+		$this->db->where("tanggal>=",$tanggal);
+		$this->db->where($data);
+		return $this->db->get('input_pakan');
 	}
-	
+	function cek_chikin($pers)
+	{
+
+		$this->db->order_by('tanggal DESC');
+		return $this->db->get_where('chikin', $pers);
+	}
 	
 }
